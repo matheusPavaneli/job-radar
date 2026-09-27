@@ -1,0 +1,12 @@
+{
+  "provider": "local",
+  "key_prefix": "JR",
+  "preset": "solo-saas",
+  "preset_confirmed": true,
+  "flow": {
+    "source": "main",
+    "validation": [],
+    "strategy": "trunk",
+    "branch_pattern": "{key}-{slug}"
+  }
+}

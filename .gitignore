@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.next/
+.vercel/
+.env
+.env.*
+!.env.example
+__pycache__/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.dump
+*.age
+
+# workbench: per-checkout scratch; the config and a local backlog are shared
+.workflow/*
+!.workflow/config.json
+!.workflow/tasks/

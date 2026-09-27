@@ -1,0 +1,11 @@
+{
+  "key": "JR-18",
+  "title": "Observabilidade: Sentry e OpenTelemetry",
+  "type": "chore",
+  "status": "open",
+  "desc": "Sentry nos 3 serviços e no web, sem PII (scrub de currículo); traces propagados do gateway aos subgraphs. Done: um erro forçado aparece no Sentry com trace id.",
+  "created": "2026-09-27T23:41:01Z",
+  "updated": "2026-09-27T23:41:01Z",
+  "comments": [],
+  "linked": []
+}

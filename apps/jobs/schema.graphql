@@ -1,0 +1,42 @@
+extend schema @link(url: "https://specs.apollo.dev/federation/v2.9", import: ["@key", "@shareable"])
+
+scalar DateTime
+
+type Query {
+  job(id: ID!): Job
+  "Newest first. Cursor-paginated; `first` is capped at 50."
+  jobs(first: Int = 20, after: String, filter: JobFilter): JobConnection!
+}
+
+input JobFilter {
+  "Full-text search over title, company and description."
+  text: String
+  "Matches jobs carrying every tag listed."
+  tags: [String!]
+}
+
+type Job @key(fields: "id") {
+  id: ID!
+  title: String!
+  company: String!
+  url: String!
+  location: String
+  tags: [String!]!
+  description: String!
+  publishedAt: DateTime!
+}
+
+type JobConnection {
+  edges: [JobEdge!]!
+  pageInfo: PageInfo!
+}
+
+type JobEdge {
+  cursor: String!
+  node: Job!
+}
+
+type PageInfo @shareable {
+  hasNextPage: Boolean!
+  endCursor: String
+}

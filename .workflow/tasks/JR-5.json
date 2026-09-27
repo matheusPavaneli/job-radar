@@ -1,0 +1,11 @@
+{
+  "key": "JR-5",
+  "title": "Subgraph matching (FastAPI+Ariadne): currículo, matches e exclusão",
+  "type": "feature",
+  "status": "open",
+  "desc": "upsertResume com redação de PII (email, telefone, URLs, nome informado) antes de persistir e de embedar; myResume; myMatches; deleteMyData em cascata. Toda query sob SET LOCAL ROLE job_radar_app + app.user_id (RLS). Done: teste prova que o usuário A não lê dados do B; testes de redação com casos PT-BR; ruff, mypy e pytest no CI.",
+  "created": "2026-09-27T23:40:48Z",
+  "updated": "2026-09-27T23:40:48Z",
+  "comments": [],
+  "linked": []
+}

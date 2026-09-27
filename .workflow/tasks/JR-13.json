@@ -1,0 +1,11 @@
+{
+  "key": "JR-13",
+  "title": "Upload de currículo em PDF",
+  "type": "feature",
+  "status": "open",
+  "desc": "Parse em memória, PDF nunca persistido, segue para a mesma redação de PII. Limite de tamanho (2 MB) e de páginas. Done: teste com PDF malformado e com PDF acima do limite.",
+  "created": "2026-09-27T23:40:56Z",
+  "updated": "2026-09-27T23:40:56Z",
+  "comments": [],
+  "linked": []
+}

@@ -1,0 +1,11 @@
+{
+  "key": "JR-17",
+  "title": "Segunda fonte de vagas: boards Greenhouse e Lever",
+  "type": "feature",
+  "status": "open",
+  "desc": "Lista de empresas configurável; mesma normalização e dedup entre fontes. Done: vaga presente nas duas fontes aparece uma vez.",
+  "created": "2026-09-27T23:41:00Z",
+  "updated": "2026-09-27T23:41:00Z",
+  "comments": [],
+  "linked": []
+}

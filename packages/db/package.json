@@ -1,0 +1,12 @@
+{
+  "name": "@job-radar/db",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "migrate": "node --env-file-if-exists=../../.env src/migrate.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "postgres": "3.4.9"
+  }
+}

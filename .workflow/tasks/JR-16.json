@@ -1,0 +1,11 @@
+{
+  "key": "JR-16",
+  "title": "Benchmarks e docs de performance para o README",
+  "type": "spike",
+  "status": "open",
+  "desc": "k6 p95 frio e quente no gateway; N+1 antes e depois de batching; EXPLAIN ANALYZE das 3 queries principais com índices justificados. Done: docs/perf/ e tabela no README com números medidos.",
+  "created": "2026-09-27T23:40:59Z",
+  "updated": "2026-09-27T23:40:59Z",
+  "comments": [],
+  "linked": []
+}

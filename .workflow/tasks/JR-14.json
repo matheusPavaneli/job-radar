@@ -1,0 +1,11 @@
+{
+  "key": "JR-14",
+  "title": "Segurança GraphQL: limite de profundidade e custo, persisted queries",
+  "type": "chore",
+  "status": "open",
+  "desc": "Limites no gateway; em produção só persisted queries do web. Done: query abusiva rejeitada com erro claro; teste.",
+  "created": "2026-09-27T23:40:57Z",
+  "updated": "2026-09-27T23:40:57Z",
+  "comments": [],
+  "linked": []
+}

@@ -1,0 +1,34 @@
+extend schema @link(url: "https://specs.apollo.dev/federation/v2.9", import: ["@key"])
+
+scalar DateTime
+
+"Owned by the jobs subgraph; this subgraph only references it by id."
+type Job @key(fields: "id", resolvable: false) {
+  id: ID!
+}
+
+type Match {
+  job: Job!
+  "Cosine similarity between the resume and the job, 0..1."
+  score: Float!
+}
+
+type Resume {
+  contentHash: String!
+  updatedAt: DateTime!
+}
+
+type Query {
+  "Precomputed matches for the signed-in user, best first."
+  myMatches(first: Int = 20): [Match!]!
+  myResume: Resume
+  "Semantic search over the catalogue. Requires sign-in (rate-limited)."
+  semanticSearch(query: String!, first: Int = 20): [Match!]!
+}
+
+type Mutation {
+  "Stores the resume after PII redaction. The raw text is never persisted."
+  upsertResume(text: String!): Resume!
+  "Deletes every row owned by the signed-in user."
+  deleteMyData: Boolean!
+}

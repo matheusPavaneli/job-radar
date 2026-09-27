@@ -1,0 +1,11 @@
+{
+  "key": "JR-8",
+  "title": "Deploy de produção R$0: Vercel + Neon + Upstash + Clerk",
+  "type": "chore",
+  "status": "open",
+  "desc": "Depende de JR-1. Marketplace injeta as envs; migrations rodam no Actions antes do deploy da main; preview por PR. Done: URL de produção servindo o slice para o Matheus; runbook em docs/ com as ações manuais únicas; rollback = Instant Rollback da Vercel mais migrations só aditivas.",
+  "created": "2026-09-27T23:40:51Z",
+  "updated": "2026-09-27T23:40:51Z",
+  "comments": [],
+  "linked": []
+}

@@ -1,0 +1,11 @@
+{
+  "key": "JR-4",
+  "title": "Subgraph jobs (NestJS): job, jobs paginado e filtro full-text",
+  "type": "feature",
+  "status": "open",
+  "desc": "Implementa apps/jobs/schema.graphql, schema-first, Federation v2. Paginação por cursor (published_at, id), first até 50, filtro text via tsvector e tags. __resolveReference para Job. Rejeita requisição sem x-internal-auth válido. Done: testes de cursor e de assinatura; EXPLAIN do jobs mostra index scan.",
+  "created": "2026-09-27T23:40:47Z",
+  "updated": "2026-09-27T23:40:47Z",
+  "comments": [],
+  "linked": []
+}

@@ -1,0 +1,11 @@
+{
+  "key": "JR-15",
+  "title": "Backup semanal cifrado do Neon",
+  "type": "chore",
+  "status": "open",
+  "desc": "pg_dump no Actions, cifrado com age (chave pública em secret), artifact com retenção de 90 dias. Repo público: dump sem cifra é vazamento de currículo. Done: restore testado localmente e documentado.",
+  "created": "2026-09-27T23:40:58Z",
+  "updated": "2026-09-27T23:40:58Z",
+  "comments": [],
+  "linked": []
+}

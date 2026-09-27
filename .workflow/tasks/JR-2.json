@@ -1,0 +1,11 @@
+{
+  "key": "JR-2",
+  "title": "Fundação do monorepo: CI, Postgres local e migrations",
+  "type": "chore",
+  "status": "open",
+  "desc": "Done: GitHub Actions roda typecheck, testes Node e Python, compose do supergraph (falha em erro de composição); compose.yaml sobe pgvector; pnpm db:migrate aplica 0001_init.sql limpo e é idempotente; checksum de migration alterada falha. Rollback: reverter commit.",
+  "created": "2026-09-27T23:40:45Z",
+  "updated": "2026-09-27T23:40:45Z",
+  "comments": [],
+  "linked": []
+}

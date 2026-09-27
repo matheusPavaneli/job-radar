@@ -1,0 +1,19 @@
+{
+  "name": "@job-radar/gateway",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=../../.env --watch src/server.ts",
+    "compose": "node scripts/compose.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@graphql-hive/gateway-runtime": "2.12.0",
+    "graphql": "16.14.2",
+    "jose": "6.2.12"
+  },
+  "devDependencies": {
+    "@theguild/federation-composition": "0.27.0"
+  }
+}

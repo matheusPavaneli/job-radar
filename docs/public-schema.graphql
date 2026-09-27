@@ -1,0 +1,82 @@
+scalar DateTime
+
+type Query {
+  job(id: ID!): Job
+  """
+  Newest first. Cursor-paginated; `first` is capped at 50.
+  """
+  jobs(first: Int = 20, after: String, filter: JobFilter): JobConnection!
+  """
+  Precomputed matches for the signed-in user, best first.
+  """
+  myMatches(first: Int = 20): [Match!]!
+  myResume: Resume
+  """
+  Semantic search over the catalogue. Requires sign-in (rate-limited).
+  """
+  semanticSearch(query: String!, first: Int = 20): [Match!]!
+}
+
+"""
+Owned by the jobs subgraph; this subgraph only references it by id.
+"""
+type Job {
+  id: ID!
+  title: String!
+  company: String!
+  url: String!
+  location: String
+  tags: [String!]!
+  description: String!
+  publishedAt: DateTime!
+}
+
+type JobConnection {
+  edges: [JobEdge!]!
+  pageInfo: PageInfo!
+}
+
+type JobEdge {
+  cursor: String!
+  node: Job!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  endCursor: String
+}
+
+type Match {
+  job: Job!
+  """
+  Cosine similarity between the resume and the job, 0..1.
+  """
+  score: Float!
+}
+
+type Resume {
+  contentHash: String!
+  updatedAt: DateTime!
+}
+
+type Mutation {
+  """
+  Stores the resume after PII redaction. The raw text is never persisted.
+  """
+  upsertResume(text: String!): Resume!
+  """
+  Deletes every row owned by the signed-in user.
+  """
+  deleteMyData: Boolean!
+}
+
+input JobFilter {
+  """
+  Full-text search over title, company and description.
+  """
+  text: String
+  """
+  Matches jobs carrying every tag listed.
+  """
+  tags: [String!]
+}

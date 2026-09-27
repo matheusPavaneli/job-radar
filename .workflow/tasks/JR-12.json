@@ -1,0 +1,11 @@
+{
+  "key": "JR-12",
+  "title": "Busca semântica livre (semanticSearch)",
+  "type": "feature",
+  "status": "open",
+  "desc": "Híbrida: full-text mais vetor (RRF). Rate limit por usuário. Done: benchmark frio e quente registrado; casos em que keyword falha e semântica acerta documentados.",
+  "created": "2026-09-27T23:40:55Z",
+  "updated": "2026-09-27T23:40:55Z",
+  "comments": [],
+  "linked": []
+}

@@ -1,0 +1,11 @@
+{
+  "key": "JR-6",
+  "title": "Gateway Hive: JWT Clerk e identidade assinada para subgraphs",
+  "type": "feature",
+  "status": "open",
+  "desc": "Valida o JWT via JWKS e issuer do Clerk; token inválido gera UNAUTHENTICATED, ausente segue anônimo. Propaga x-internal-auth com HMAC (userId, timestamp, tolerância de 60s). Introspecção desligada em produção, erros mascarados, URLs de subgraph resolvidas do env. Done: testes de assinar e verificar (incluindo expirado e adulterado); uma query federada ponta a ponta retorna Match.job.title.",
+  "created": "2026-09-27T23:40:49Z",
+  "updated": "2026-09-27T23:40:49Z",
+  "comments": [],
+  "linked": []
+}

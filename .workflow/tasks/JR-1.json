@@ -1,0 +1,11 @@
+{
+  "key": "JR-1",
+  "title": "Verificar Vercel Services no plano Hobby",
+  "type": "spike",
+  "status": "open",
+  "desc": "Deploy de teste com vercel.json services (Next + Node + Python) numa conta Hobby. Done: resposta sim/não documentada em docs/decisions.md; se não, fallback = 1 projeto Vercel por app no monorepo, com URL + INTERNAL_HMAC_SECRET. Bloqueia JR-8.",
+  "created": "2026-09-27T23:40:44Z",
+  "updated": "2026-09-27T23:40:44Z",
+  "comments": [],
+  "linked": []
+}

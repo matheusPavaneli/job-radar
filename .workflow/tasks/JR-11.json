@@ -1,0 +1,11 @@
+{
+  "key": "JR-11",
+  "title": "Explicação do match por LLM com failover Groq e Gemini",
+  "type": "feature",
+  "status": "open",
+  "desc": "Só texto redigido sai do sistema. Groq principal, Gemini fallback com circuit breaker; cache no Upstash por (jobId, resumeHash); limite de 20 por usuário por dia (@upstash/ratelimit). Done: teste de caos (Groq fora) mantém a feature; custo e quota documentados.",
+  "created": "2026-09-27T23:40:54Z",
+  "updated": "2026-09-27T23:40:54Z",
+  "comments": [],
+  "linked": []
+}

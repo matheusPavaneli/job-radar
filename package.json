@@ -1,0 +1,17 @@
+{
+  "name": "job-radar",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.17.0",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "typecheck": "pnpm -r --parallel run typecheck",
+    "test": "pnpm -r run test",
+    "compose": "pnpm --filter @job-radar/gateway run compose",
+    "db:migrate": "pnpm --filter @job-radar/db run migrate"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.0",
+    "typescript": "6.0.3"
+  }
+}

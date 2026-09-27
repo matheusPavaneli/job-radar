@@ -1,0 +1,11 @@
+{
+  "key": "JR-10",
+  "title": "Web Push de novas vagas com match alto",
+  "type": "feature",
+  "status": "open",
+  "desc": "VAPID, service worker, manifest PWA; inscrição por usuário (push_subscriptions); ingestão notifica matches novos acima do limiar, no máximo 1 push por usuário por execução; remove inscrição em 404/410. Done: instruções de instalar na tela inicial para iOS; teste do agrupamento e da limpeza.",
+  "created": "2026-09-27T23:40:53Z",
+  "updated": "2026-09-27T23:40:53Z",
+  "comments": [],
+  "linked": []
+}

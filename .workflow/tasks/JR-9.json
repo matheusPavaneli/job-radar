@@ -1,0 +1,11 @@
+{
+  "key": "JR-9",
+  "title": "Convites: acesso por código, teto de 20 usuários",
+  "type": "feature",
+  "status": "open",
+  "desc": "Tabela invites; resgate atômico no primeiro login; sem convite, sem acesso a dados. Done: teste de corrida (dois resgates do mesmo código, um falha); teto configurável.",
+  "created": "2026-09-27T23:40:52Z",
+  "updated": "2026-09-27T23:40:52Z",
+  "comments": [],
+  "linked": []
+}
