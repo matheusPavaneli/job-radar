@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "migrate": "node --env-file-if-exists=../../.env src/migrate.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\""
   },
   "dependencies": {
     "postgres": "3.4.9"
