@@ -3,9 +3,9 @@
   "title": "Web mínimo: login, colar currículo, lista de matches, marcar apliquei/irrelevante",
   "type": "feature",
   "status": "open",
-  "desc": "Next.js com Clerk. Tela única: colar currículo, top 20 matches com link para a vaga, botões apliquei e irrelevante (grava evento). Página de privacidade. Done: instrumenta a métrica do frame (candidaturas por semana) com consulta SQL documentada; funciona em 320px.",
+  "desc": "Next.js com Clerk. Tela única: colar currículo, top 20 matches com link para a vaga e crédito \"via Remotive\" com link de volta (exigência da Remotive), botões apliquei e irrelevante (grava evento). Página de privacidade. Done: instrumenta a métrica do frame (candidaturas por semana) com consulta SQL documentada; funciona em 320px.",
   "created": "2026-09-27T23:40:50Z",
-  "updated": "2026-09-27T23:40:50Z",
+  "updated": "2026-09-28T13:00:00Z",
   "comments": [],
   "linked": []
 }
