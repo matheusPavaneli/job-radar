@@ -2,10 +2,10 @@
   "key": "JR-19",
   "title": "Remover comentário restante em 0001_init.sql",
   "type": "chore",
-  "status": "open",
+  "status": "done",
   "desc": "Sobrou um comentário inline em packages/db/migrations/0001_init.sql:54 (redacted_text), que escapou do JR-2. Remover muda o checksum da migration, então precisa ser feito antes do JR-8 criar o banco de produção; bancos locais precisam de docker compose down -v. Done: nenhum comentário em .sql, .ts, .py e .yml do repo; testes e CI verdes.",
   "created": "2026-09-28T13:19:17Z",
-  "updated": "2026-09-28T13:19:17Z",
+  "updated": "2026-09-28T14:01:51Z",
   "comments": [],
   "linked": [
     {
