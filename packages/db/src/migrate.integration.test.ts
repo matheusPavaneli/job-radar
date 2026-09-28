@@ -1,5 +1,3 @@
-// Runs against a real Postgres with pgvector. Skipped unless DATABASE_URL is set
-// (compose.yaml locally, a service container in CI).
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { after, before, describe, test } from 'node:test';

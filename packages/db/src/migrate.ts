@@ -1,6 +1,3 @@
-// Applies migrations/*.sql in lexical order, each in its own transaction.
-// Applied files are recorded by name and checksum; an edited applied migration fails the run.
-// A session advisory lock serialises concurrent runners (CI and a manual run).
 import { createHash } from 'node:crypto';
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -8,7 +5,7 @@ import postgres from 'postgres';
 import { pendingMigrations } from './pending.ts';
 
 const MIGRATIONS_DIR = join(import.meta.dirname, '..', 'migrations');
-const LOCK_KEY = 7_411_902; // arbitrary, stable: identifies this runner's advisory lock
+const LOCK_KEY = 7_411_902;
 
 export async function runMigrations(databaseUrl: string, dir = MIGRATIONS_DIR): Promise<string[]> {
   const sql = postgres(databaseUrl, { max: 1, onnotice: () => {} });
@@ -42,7 +39,6 @@ export async function runMigrations(databaseUrl: string, dir = MIGRATIONS_DIR): 
     }
     return done;
   } finally {
-    // Closing the only connection also releases the session lock if the unlock never ran.
     await sql`select pg_advisory_unlock(${LOCK_KEY})`.catch(() => {});
     await sql.end();
   }
