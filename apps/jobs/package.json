@@ -1,0 +1,29 @@
+{
+  "name": "@job-radar/jobs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\" && tsc -p tsconfig.json",
+    "start": "node --env-file-if-exists=../../.env dist/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm run build && node --test \"dist/**/*.test.js\""
+  },
+  "dependencies": {
+    "@apollo/server": "5.5.1",
+    "@apollo/subgraph": "2.15.1",
+    "@as-integrations/express5": "1.1.2",
+    "@job-radar/internal-auth": "workspace:*",
+    "@nestjs/apollo": "14.0.2",
+    "@nestjs/common": "12.1.0",
+    "@nestjs/core": "12.1.0",
+    "@nestjs/graphql": "14.0.2",
+    "@nestjs/platform-express": "12.1.0",
+    "graphql": "16.14.2",
+    "postgres": "3.4.9",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@job-radar/db": "workspace:*"
+  }
+}

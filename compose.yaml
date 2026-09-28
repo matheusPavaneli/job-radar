@@ -1,4 +1,3 @@
-# Local development only. Production uses Neon (Postgres + pgvector).
 services:
   postgres:
     image: pgvector/pgvector:pg17

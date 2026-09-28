@@ -1,0 +1,12 @@
+{
+  "name": "@job-radar/internal-auth",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\""
+  }
+}
