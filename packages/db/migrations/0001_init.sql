@@ -13,7 +13,7 @@ language sql stable
 as $$ select nullif(current_setting('app.user_id', true), '') $$;
 
 create table users (
-  id text primary key,              -- Clerk user id
+  id text primary key,
   created_at timestamptz not null default now()
 );
 
@@ -51,7 +51,7 @@ create index jobs_embedding_idx on jobs using hnsw (embedding halfvec_cosine_ops
 
 create table resumes (
   user_id text primary key references users (id) on delete cascade,
-  redacted_text text not null,      -- PII already stripped; the raw PDF is never stored
+  redacted_text text not null,
   content_hash text not null,
   embedding halfvec(384) not null,
   updated_at timestamptz not null default now()
