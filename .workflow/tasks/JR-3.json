@@ -2,10 +2,10 @@
   "key": "JR-3",
   "title": "Ingestão Remotive via GitHub Actions cron",
   "type": "feature",
-  "status": "open",
+  "status": "done",
   "desc": "Cron a cada 6h: coleta Remotive, normaliza, dedup por (source, external_id) + content_hash, embeddings fastembed bge-small (384, halfvec) só para vagas novas/alteradas, retenção 60 dias por published_at, recalcula matches por currículo (cosseno, top 100 por usuário). Python em services/matching (uv, ruff, mypy, pytest, job Python no CI). Máximo 4 coletas por dia garantido pela tabela ingest_runs. Done: rodar 2x seguidas não duplica nada; testes de normalize e hash; quinta coleta em 24h é recusada; log sem PII.",
   "created": "2026-09-27T23:40:46Z",
-  "updated": "2026-09-28T13:00:00Z",
+  "updated": "2026-09-28T13:13:23Z",
   "comments": [],
   "linked": []
 }
