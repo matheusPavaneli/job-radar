@@ -1,6 +1,3 @@
-// Composes the subgraph contracts into the supergraph the gateway serves.
-// Fails (exit 1) on any composition error, so CI blocks an incompatible schema change.
-// Subgraph URLs are env placeholders, resolved by the gateway at startup.
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { composeServices } from '@theguild/federation-composition';

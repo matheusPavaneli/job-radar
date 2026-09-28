@@ -1,8 +1,5 @@
 create extension if not exists vector;
 
--- Subgraphs connect as the owner but run every request under this role
--- (`set local role job_radar_app`), so row-level security always applies to them.
--- Ingestion and migrations stay on the owner role, which bypasses RLS.
 do $$
 begin
   if not exists (select from pg_roles where rolname = 'job_radar_app') then
@@ -40,7 +37,6 @@ create table jobs (
   description text not null,
   published_at timestamptz not null,
   ingested_at timestamptz not null default now(),
-  -- halfvec keeps 384 dims at ~768 bytes per row: Neon Free has 0.5 GB.
   embedding halfvec(384),
   search tsvector generated always as (
     setweight(to_tsvector('english', title), 'A') ||
@@ -80,10 +76,8 @@ create table push_subscriptions (
 );
 create index push_subscriptions_user_idx on push_subscriptions (user_id);
 
--- Public catalogue
 grant select on jobs to job_radar_app;
 
--- Per-user data: visible and writable only by its owner
 grant select, insert on users to job_radar_app;
 grant select, insert, update, delete on resumes, matches, push_subscriptions to job_radar_app;
 grant delete on users to job_radar_app;
